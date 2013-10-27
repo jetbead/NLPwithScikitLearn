@@ -33,10 +33,12 @@ MacPortsに入っているので、それを使う。Pythonや必要なパッケ
 素性の作成と学習
 ------
 script/makefeatures.pyをいじって作成する。
+
     $ ./script/makefeatures < data/201303.utf8.tsv > list
     $ tail +4693 list > list.feat
 
 作成したデータを使って学習させる。
+
     $ ./script/learn.py ./list.feat
     ...
     Accuracy: 0.510158013544 ( 226 / 443 )
